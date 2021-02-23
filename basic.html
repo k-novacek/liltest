@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: Gotham,Helvetica,Arial,sans-serif;
+                color: #4d6859;
+            }
+            .header {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .articles {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .article {
+                margin: 1rem;
+                flex-basis: 456px;
+            }
+            .recommended {
+                display: flex;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: bolder;
+                color: #00833d;
+                text-align: center;
+            }
+            .recommended .line {
+                margin-top: 0;
+                margin-bottom: .5rem;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+            }
+            .recommended .line::before {
+                border-top: 2px solid #7fba00;
+                content: "";
+                margin: 0 auto;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: -1;
+            }
+            .recommended span {
+                padding: 0 1rem;
+                background: white;
+            }
+            .products {
+                margin: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .product {
+                text-align: center;
+                flex-grow: 1;
+                flex-basis: 250px;
+                position:relative;
+            }
+            .product a {
+                text-decoration: none;
+                color: inherit;
+                position:relative;
+            }
+            .product a>div {
+                margin: 5px 0;
+            }
+            .product .category {
+                color:grey;
+                font-size: 0.7rem;
+            }
+            .product .name {
+                color: black;
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+            .product .contents {
+                color: grey;
+                font-size: 0.9;
+                font-weight: bold;
+                margin: 1rem 0;
+            }
+            .product .price {
+                color:black;
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+            .product.special .price {
+                color: #990028;
+            }
+            .product.special .special-offer {
+                background: #ddebb3;
+                position:absolute;
+                transform: rotate(90deg);
+                transform-origin: left top 0;
+                top:0;
+                right:0;
+                padding: 0.5rem 1rem;
+                border-radius: 0 5px 5px 0;
+
+            }
+            .product .add-to-cart {
+                display: inline-block;
+                background: #d44400;
+                color: white;
+                padding: 1rem;
+                margin: 1rem;
+                font-weight: bold;
+                border-radius: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <a href="#">
+                <img src="./src/images/Hero.webp">
+            </a>
+        </div>
+        <div class="articles">
+            <div class="article">
+                <a href="#">
+                    <img src="./src/images/HP_Antidotes.webp">
+                </a>
+            </div>
+            <div class="article">
+                <a href="#">
+                    <img src="./src/images/HP_On_Sale.webp">
+                </a>
+            </div>
+            <div class="article">
+                <a href="#">
+                    <img src="./src/images/HP_Personalized.webp">
+                </a>
+            </div>
+        </div>
+        <div class="recommended">
+            <h2 class="line"><span>You May Like</span></h2>
+        </div>
+        <div class="products">
+            <div class="product">
+                <a href="#">
+                    <img src="./src/images/SW1113.webp" alt="">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="ratings">(440)</span>
+                    </div>
+                    <div class="category">
+                        Swanson Premium
+                    </div>
+                    <div class="name">
+                        Zinc Picolinate - Body Preferred Form
+                    </div>
+                    <div class="contents">
+                        5,000 IU 250 Sgels
+                    </div>
+                    <div class="price">$2.59</div>
+                    <a href="#" class="add-to-cart">add to cart</a>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <img src="./src/images/SW1371.webp" alt="">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="ratings">(95)</span>
+                    </div>
+                    <div class="category">
+                        Swanson Premium
+                    </div>
+                    <div class="name">
+                        Vitamin D3 - Highest Potency
+                    </div>
+                    <div class="contents">
+                        22 mg 60 Caps
+                    </div>
+                    <div class="price">$10.99</div>
+                    <a href="#" class="add-to-cart">add to cart</a>
+                </a>
+            </div>
+            <div class="product special">
+                <a href="#">
+                    <img src="./src/images/SW1613.webp" alt="">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="ratings">(823)</span>
+                    </div>
+                    <div class="category">
+                        Swanson Premium
+                    </div>
+                    <div class="name">
+                        Tumeric & Black Pepper
+                    </div>
+                    <div class="contents">
+                        60 Veg Caps
+                    </div>
+                    <div class="price">2 for $13.99</div>
+                    <a href="#" class="add-to-cart">add to cart</a>
+                    <span class="special-offer">BOGO</span>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <img src="./src/images/DELIVERYINS01.webp" alt="">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="ratings">(78)</span>
+                    </div>
+                    <div class="category">
+                        Swanson Health Products, Inc.
+                    </div>
+                    <div class="name">
+                        Delivery Insurance
+                    </div>
+                    <div class="contents">
+                    </div>
+                    <div class="price">$1.00</div>
+                    <a href="#" class="add-to-cart">add to cart</a>
+                </a>
+            </div>
+            <div class="product special">
+                <a href="#">
+                    <img src="./src/images/SWA051.webp" alt="">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="ratings">(238)</span>
+                    </div>
+                    <div class="category">
+                        Swanson Premium
+                    </div>
+                    <div class="name">
+                        Dr. Stephen Langer's Ultimate 16 Strain Probiotic with FOS
+                    </div>
+                    <div class="contents">
+                        3.2 Billion CFU 60 Veg Drcaps
+                    </div>
+                    <div class="price">2 for $14.79</div>
+                    <a href="#" class="add-to-cart">add to cart</a>
+                    <span class="special-offer">BOGO</span>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
