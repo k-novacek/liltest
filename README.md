@@ -1,3 +1,9 @@
+# Files
+There is a basic layout made with HTML/CSS contained in basic html.
+There is an attempt at a reactjs version of products created from create-react-app
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
